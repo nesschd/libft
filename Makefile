@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tlamart <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/11/12 09:50:07 by tlamart           #+#    #+#              #
-#    Updated: 2019/06/10 16:44:36 by nchahed          ###   ########.fr        #
+#    Created: 2019/06/10 17:42:43 by nchahed           #+#    #+#              #
+#    Updated: 2019/06/10 18:49:03 by nchahed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all clean fclean re
 
-SRC = ft_strlen.c
+SRC = ft_isalpha.c ft_isdigit.c ft_memalloc.c ft_memdel.c ft_memset.c ft_strclr.c ft_strdel.c ft_strlen.c ft_strnew.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -35,3 +35,4 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
+
