@@ -6,7 +6,7 @@
 #    By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/10 17:42:43 by nchahed           #+#    #+#              #
-#    Updated: 2019/06/11 03:51:31 by nchahed          ###   ########.fr        #
+#    Updated: 2019/06/11 04:53:08 by nchahed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,10 @@ SRC =	ft_bzero.c		\
 		ft_memcmp.c		\
 		ft_memchr.c		\
 		ft_memmove.c	\
-		ft_memccpy.c
+		ft_memccpy.c	\
+		ft_strrchr.c	\
+		ft_strchr.c		\
+		ft_strncat.c	
 
 OBJ = $(SRC:.c=.o)
 
