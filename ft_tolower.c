@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nesschd <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 04:40:46 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/06 17:39:57 by nesschd          ###   ########.fr       */
+/*   Created: 2019/10/06 17:59:42 by nesschd           #+#    #+#             */
+/*   Updated: 2019/10/06 18:01:33 by nesschd          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		tolower(int c)
 {
-	int		i;
-	
-	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
-	if (s[i] == c)
-		return ((char*)s + i);
-	else
-		return (NULL);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	else 
+		return (c);
 }
