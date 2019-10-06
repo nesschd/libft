@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nesschd <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 03:23:53 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/06 16:37:09 by nesschd          ###   ########.fr       */
+/*   Created: 2019/10/06 16:45:54 by nesschd           #+#    #+#             */
+/*   Updated: 2019/10/06 16:51:23 by nesschd          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
-char	*ft_strcpy(char *dest, const char *src)
-{
-	int		i;
 
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+int		isprint(int	c)
+{
+	if (c > 31 && c < 127)
+		return (1);
+	return (0);
 }

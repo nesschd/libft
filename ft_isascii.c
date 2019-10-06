@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: nesschd <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/11 03:23:53 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/06 16:37:09 by nesschd          ###   ########.fr       */
+/*   Created: 2019/10/06 16:52:57 by nesschd           #+#    #+#             */
+/*   Updated: 2019/10/06 16:56:00 by nesschd          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
-char	*ft_strcpy(char *dest, const char *src)
-{
-	int		i;
 
-	i = 0;
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+int		ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	else
+		return (0);
 }
