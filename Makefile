@@ -6,7 +6,7 @@
 #    By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/10 17:42:43 by nchahed           #+#    #+#              #
-#    Updated: 2019/10/08 12:35:29 by nchahed          ###   ########.fr        #
+#    Updated: 2019/10/08 12:41:28 by nchahed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,9 +41,9 @@ SRC =	ft_bzero.c		\
 		ft_tolower.c	\
 		ft_strncmp.c	\
 		ft_atoi.c		\
-		ft_putchar_fd	\
-		ft_putstr_fd	\
-		ft_putendl_fd	
+		ft_putchar_fd.c	\
+		ft_putstr_fd.c	\
+		ft_putendl_fd.c	
 
 OBJ = $(SRC:.c=.o)
 
