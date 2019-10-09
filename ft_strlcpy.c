@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:25:55 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/09 16:19:58 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 16:23:24 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srclen;
-	int		i;
+	size_t	i;
 
 	srclen = ft_strlen(src);
 	i = 0;
