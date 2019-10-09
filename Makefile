@@ -6,7 +6,7 @@
 #    By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/10 17:42:43 by nchahed           #+#    #+#              #
-#    Updated: 2019/10/09 16:08:16 by nchahed          ###   ########.fr        #
+#    Updated: 2019/10/09 16:30:09 by nchahed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,7 @@ SRC =	ft_bzero.c		\
 		ft_calloc.c		\
 		ft_strlcpy.c	\
 		ft_strlcat.c	\
-		ft_strnstr
+		ft_strnstr.c
 
 OBJ = $(SRC:.c=.o)
 
