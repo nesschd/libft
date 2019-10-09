@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 04:21:11 by nchahed           #+#    #+#             */
-/*   Updated: 2019/06/11 04:28:23 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:37:25 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 		i++;
 	j = 0;
 	while (j < n && src[j])
-	{	
+	{
 		dest[i] = src[j];
 		i++;
 		j++;
 	}
 	dest[i] = '\0';
-	return (dest);	
+	return (dest);
 }

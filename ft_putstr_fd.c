@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/07 11:19:30 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/08 12:46:52 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:45:49 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (s[i])
 	{
-		ft_putchar_fd(s[i],fd);
+		ft_putchar_fd(s[i], fd);
 		i++;
 	}
 }

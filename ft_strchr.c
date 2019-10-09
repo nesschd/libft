@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 04:40:46 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/06 19:42:39 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:45:17 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	int		i;
-	
+
 	i = 0;
 	while (s[i] && s[i] != c)
 		i++;

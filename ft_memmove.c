@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 02:46:26 by nchahed           #+#    #+#             */
-/*   Updated: 2019/06/11 03:07:34 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:48:31 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 		else
 		{
-			((char*)dest)[i] =((char*)src)[i];
+			((char*)dest)[i] = ((char*)src)[i];
 			i++;
 		}
 	}
-	return (dest);	
+	return (dest);
 }

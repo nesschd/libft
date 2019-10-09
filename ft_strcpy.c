@@ -6,12 +6,12 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 03:23:53 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/06 19:42:53 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:44:55 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
+
 char	*ft_strcpy(char *dest, const char *src)
 {
 	int		i;
