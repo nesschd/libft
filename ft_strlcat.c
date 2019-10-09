@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 13:17:59 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/09 17:36:14 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 17:56:18 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (dstsize);
 	while (dst[i])
 		i++;
-	while (i + j < dstsize - 1 && src[j]0
+	while (i + j < dstsize - 1 && src[j])
 	{
 		dst[i + j] = src[j];
 		j++;
