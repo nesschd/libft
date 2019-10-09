@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:14:15 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/09 15:55:43 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 16:00:30 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (i < len)
 	{
 		if (ft_strncmp((char*)haystack, needle, ft_strlen(needle)) == 0)
-			return ((char*)&needle[i]);
+			return ((char*)&haystack[i]);
 		i++;
 	}
 	return (NULL);
