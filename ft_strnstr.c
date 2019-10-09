@@ -6,11 +6,12 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:14:15 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/09 15:34:16 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 15:55:43 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -24,7 +25,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (i < len)
 	{
 		if (ft_strncmp((char*)haystack, needle, ft_strlen(needle)) == 0)
-			return ((char*)needle);
+			return ((char*)&needle[i]);
 		i++;
 	}
 	return (NULL);
@@ -32,5 +33,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 int		main(void)
 {
-	char	haystack[42] = "coucou
+	printf("%s\n", ft_strnstr("bonjour nchahed", "nchahed", 42));
+	printf("%s\n", strnstr("bonjour nchahed", "nchahed",42));
+	return (0);
 }
