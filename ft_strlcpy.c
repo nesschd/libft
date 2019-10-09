@@ -6,9 +6,11 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 11:25:55 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/09 13:37:39 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 16:15:04 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -23,9 +25,9 @@ size_t	strlcpy(char *dst, const char *src, size_t dstsize)
 		return (srclen);
 	while (src[i] && i < dstsize - 1)
 	{	
-		dest[i] = src[i];
+		dst[i] = src[i];
 		i++;
 	}
-	dest[i] = '\0';
+	dst[i] = '\0';
 	return (srclen);	
 }

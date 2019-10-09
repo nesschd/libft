@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/09 14:14:15 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/09 16:00:30 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/09 16:06:52 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		return (NULL);
 	while (i < len)
 	{
-		if (ft_strncmp((char*)haystack, needle, ft_strlen(needle)) == 0)
+		if (ft_strncmp((char*)&haystack[i], needle, ft_strlen(needle)) == 0)
 			return ((char*)&haystack[i]);
 		i++;
 	}
@@ -33,7 +33,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 int		main(void)
 {
-	printf("%s\n", ft_strnstr("bonjour nchahed", "nchahed", 42));
-	printf("%s\n", strnstr("bonjour nchahed", "nchahed",42));
+	printf("%s\n", ft_strnstr("bonjour nchahed", "nchahed", 3));
+	printf("%s\n", strnstr("bonjour nchahed", "nchahed",3));
 	return (0);
 }
