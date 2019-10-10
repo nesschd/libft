@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:51:26 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/10 14:24:24 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/10 16:10:53 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = ft_strlen(s1) + ft_strlen(s2);
 	if (!(str = (char *)malloc(len + 1)))
 		return (NULL);
-	if (s1 == 0 || s2 == 0)
+	if (ft_strlen(s1) == 0 || ft_strlen(s2) == 0)
 		return (NULL);
 	else
 	{
@@ -36,5 +36,5 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 int		main(void)
 {
-	printf("%s\n", ft_strjoin("Hello", "thibal"));
+	printf("%s\n", ft_strjoin(NULL, NULL));
 }
