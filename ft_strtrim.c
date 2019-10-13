@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:30:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/13 15:09:14 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/13 16:04:29 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	size_t	start;
-	size_t	end;
-	int		i;
-	char	*str;
 
-	start = 0;
+static size_t	ft_start(char const *s1, char const *set)
+{
+	int		i;
+	size_t	start;
+
 	i = 0;
-	end = 0;
+	start = 0;
 	while (set[i])
 	{
 		if (s1[start] == set[i])
@@ -34,10 +32,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			i++;
 	}
-	printf("Start = %zu\n", start);
+	return (start);
+}
+
+static size_t	ft_end(char const *s1, char const *set)
+{
+	int		i;
+	size_t	end;
+
+	i = 0;
+	end = 0;
 	while (s1[end] != '\0')
 		end++;
-	while (set[i])
+	end--;
+	i = 0;
+	while (set[i] && end != 0)
 	{
 		if (s1[end] == set[i])
 		{
@@ -47,17 +56,28 @@ char	*ft_strtrim(char const *s1, char const *set)
 		else
 			i++;
 	}
-	printf("End = %zu\n", end);
-	if (!(str = (char *)malloc(end - start)))
-		return (NULL);
-	ft_strncpy(str, &s1[start], end - start);
-	str[end - start] = '\0';
-	return (str);
+	return (end);
 }
 
-int		main(int ac, char **av)
+char			*ft_strtrim(char const *s1, char const *set)
 {
-	if (ac > 2)
-		printf("%s\n", ft_strtrim(av[1], av[2]));
-	return (0);
+	size_t	start;
+	size_t	end;
+	int		i;
+	char	*str;
+
+	i = 0;
+	start = ft_start(s1, set);
+	end = ft_end(s1, set);
+	if (start < end)
+	{
+		if (!(str = (char *)malloc((end - start) + 2)))
+			return (NULL);
+		ft_strncpy(str, &s1[start], (end - start) + 1);
+		str[end - start + 1] = '\0';
+		return (str);
+	}
+	str = (char *)malloc(1);
+	str[0] = '\0';
+	return (str);
 }
