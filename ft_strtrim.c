@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:30:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/10 15:41:45 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/13 15:09:14 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,48 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	size_t	start;
+	size_t	end;
 	int		i;
 	char	*str;
-	size_t	len;
 
+	start = 0;
 	i = 0;
-	len = ft_strlen(s1);
-	if (s1 == 0)
+	end = 0;
+	while (set[i])
+	{
+		if (s1[start] == set[i])
+		{
+			start++;
+			i = 0;
+		}
+		else
+			i++;
+	}
+	printf("Start = %zu\n", start);
+	while (s1[end] != '\0')
+		end++;
+	while (set[i])
+	{
+		if (s1[end] == set[i])
+		{
+			end--;
+			i = 0;
+		}
+		else
+			i++;
+	}
+	printf("End = %zu\n", end);
+	if (!(str = (char *)malloc(end - start)))
 		return (NULL);
-	if (!(str = (char *)malloc(len + 1)))
-		return (NULL);
-	while (str[i] == (char)set)
-		i++;
-	if (str[i] != (char)set)
-			ft_strcpy(&str[i], s1);
-	str[len] = '\0';
+	ft_strncpy(str, &s1[start], end - start);
+	str[end - start] = '\0';
 	return (str);
 }
 
-int		main(void)
+int		main(int ac, char **av)
 {
-	printf("%s\n", ft_strtrim("hello", "h"));
+	if (ac > 2)
+		printf("%s\n", ft_strtrim(av[1], av[2]));
+	return (0);
 }
