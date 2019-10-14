@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:30:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/13 16:04:29 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/14 14:56:13 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 static size_t	ft_start(char const *s1, char const *set)
 {
-	int		i;
+	int	i;
 	size_t	start;
 
 	i = 0;
