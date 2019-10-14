@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 10:50:08 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/14 15:11:43 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/14 15:25:06 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ int	ft_countwords(char const *s, char c)
 int	main(int ac, char **av)
 {
 	if (ac > 2)
-		printf("Nombre de mots = %d\n", ft_countwords(av[1], av[2]));
+		printf("Nombre de mots = %d\n", ft_countwords(av[1], av[2][0]));
 	return (0);
 }
