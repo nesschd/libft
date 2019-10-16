@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/10 17:42:43 by nchahed           #+#    #+#              #
-#    Updated: 2019/10/09 16:30:09 by nchahed          ###   ########.fr        #
+#    Updated: 2019/10/16 22:31:13 by nchahed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRC =	ft_bzero.c		\
 		ft_calloc.c		\
 		ft_strlcpy.c	\
 		ft_strlcat.c	\
-		ft_strnstr.c
+		ft_strnstr.c	\
+		ft_split.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -71,4 +72,3 @@ fclean : clean
 	rm -rf $(NAME)
 
 re : fclean all
-
