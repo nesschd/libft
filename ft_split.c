@@ -6,17 +6,17 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 10:50:08 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/16 15:24:41 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/16 16:38:07 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_countwords(char const *s, char c)
+int		ft_countword(char const *s, char c)
 {
-	int	i;
-	int	word;
+	int		i;
+	int		word;
 
 	i = 0;
 	word = 0;
@@ -27,6 +27,23 @@ int	ft_countwords(char const *s, char c)
 		i++;
 	}
 	return (word);
+}
+
+int		ft_countletter(
+{
+
+	int		i;
+
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+	int		word;
+	
+	if(!(tab = (char *)malloc(ft_countword(word) * sizeof (char *)))
+			return (NULL);
+	
 }
 
 int	main(int ac, char **av)
