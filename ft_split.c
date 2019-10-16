@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 10:50:08 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/14 15:47:51 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/16 15:01:14 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,9 @@ int	ft_countwords(char const *s, char c)
 	word = 0;
 	while (s[i])
 	{
-		if (s[i] == c && s[i + 2] != c)
-		{
+		if (s[i] != c && s[i + 1] == c)
 			word++;
-			i++;
-		}
-		else 
-			i++;
+		i++;
 	}
 	return (word);
 }
