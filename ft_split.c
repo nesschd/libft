@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 10:50:08 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/17 14:17:51 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/17 14:26:29 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ int		main(int ac, char **av)
 		ft_putendl_fd(tab[i], 1);
 		i++;
 	}
+	free (tab[i]);
 	free (tab);
 	return (0);
 }
