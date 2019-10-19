@@ -6,7 +6,7 @@
 #    By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/10 17:42:43 by nchahed           #+#    #+#              #
-#    Updated: 2019/10/19 12:23:07 by nchahed          ###   ########.fr        #
+#    Updated: 2019/10/19 16:04:21 by nchahed          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,8 @@ SRC =	ft_bzero.c		\
 		ft_strlcat.c	\
 		ft_strnstr.c	\
 		ft_split.c		\
-		ft_strmapi.c
+		ft_strmapi.c	\
+		ft_itoa.c
 
 OBJ = $(SRC:.c=.o)
 
