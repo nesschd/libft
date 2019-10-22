@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/22 18:02:34 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:40:06 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,15 +93,17 @@ int		main(void)
 		ft_putendl_fd("STRCHR SUCCESS", 1);
 	else
 		ft_putendl_fd("STRCHR FAIL", 2);
-/*
-	
-	ft_strrchr(); strrchr();
-	// check strrchr
-*/	
+
+	if (ft_strrchr(test, 's') == strrchr(test, 's'))
+		ft_putendl_fd("STRRCHR SUCCESS", 1);
+	else
+		ft_putendl_fd("STRCHR FAIL", 2);
+
 	if (ft_strncmp("Super correction !!", "Quel super correcteur", 10) == strncmp("Super correction !!", "Quel super correcteur", 10))
 		ft_putendl_fd("STRNCMP SUCCESS", 1);
 	else
 		ft_putendl_fd("STRNCMP FAIL", 1);
+
 	if (ft_strlcpy(clibft, "HELLO WORLD", 420) ==  strlcpy(clibc, "HELLO WORLD", 420))
 	{
 		if (!strcmp(clibft, clibc))
@@ -111,18 +113,28 @@ int		main(void)
 	}
 	else
 		ft_putendl_fd("STRLCPY FAIL",2);
-/*	
 	
-	ft_strlcat(); strlcat();
-	// check strlcat
+	if (ft_strlcat(clibft, "HELLO WORLD", 420) == strlcat(clibc, "HELLO WORLD", 420))
+	{
+		if (!strcmp(clibft, clibc))
+			ft_putendl_fd("STRLCAT SUCCESS", 1);
+		else 
+			ft_putendl_fd("STRLCAT FAIL", 2);
+	}
+	else
+		ft_putendl_fd ("STRLCAT FAIL", 2);
 	
-	ft_strnstr(); strnstr();
-	// check strnstr
-	
-	ft_atoi(); atoi();
-	// check atoi
+	if (ft_strnstr_(test, "correction", 420) == strnstr(test, "correction", 420))
+		ft_putendl_fd("STRNSTR SUCCESS", 1);
+	else
+		ft_putendl_fd("STRNSTR FAIL", 2);
+		
+	if (ft_atoi("Une super correction !!") == atoi("Une super correction !!"))
+		ft_putendl_fd("ATOI SUCCESS", 1);
+	else
+		ft_putendl_fd("ATOI FAIL", 2);
 
-	ft_calloc();
+/*	ft_calloc();
 	calloc();
 	// check calloc
 	
