@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/22 18:40:06 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:47:53 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,13 @@ int		main(void)
 	ft_memmove();
 	memmove();
 	// check memmove
+*/
+
+	if (ft_memchr(test, 'c', 42) == memchr(test, 'c', 42))
+		ft_putendl_fd("MEMCHR SUCCESS", 1);
+	else
+		ft_putendl_fd("MEMCHR FAIL", 2);
 	
-	ft_memchr();
-	memchr();
-	// check memchr
-*/	
 	if (ft_memcmp("Super correction !!", "Quel super correcteur", 1) == memcmp("Super correction !!", "Quel super correcteur", 1))
 		ft_putendl_fd("MEMCMP SUCCESS", 1);
 	else
@@ -124,7 +126,7 @@ int		main(void)
 	else
 		ft_putendl_fd ("STRLCAT FAIL", 2);
 	
-	if (ft_strnstr_(test, "correction", 420) == strnstr(test, "correction", 420))
+	if (ft_strnstr(test, "correction", 420) == strnstr(test, "correction", 420))
 		ft_putendl_fd("STRNSTR SUCCESS", 1);
 	else
 		ft_putendl_fd("STRNSTR FAIL", 2);
@@ -137,9 +139,12 @@ int		main(void)
 /*	ft_calloc();
 	calloc();
 	// check calloc
-	
-	ft_strdup(); strdup();
-	// check strdup
+
 */	
+	if (ft_strdup(test) == strdup(test))
+		ft_putendl_fd("STRDUP SUCCESS", 1);
+	else
+		ft_putendl_fd("STRDUP FAIL", 2);
+
 	return (0);
 }
