@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/22 09:44:36 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/22 18:02:34 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,25 +59,36 @@ int		main(void)
 	else
 		ft_putendl_fd("ISALPHA FAIL", 2);
 	
-/*	
-	ft_isdigit(); isdigit();
-	// check isdigit;
+	if (ft_isdigit('c') == isdigit('c'))
+		ft_putendl_fd("ISDIGIT SUCCESS", 1);
+	else
+		ft_putendl_fd("ISDIGIT FAIL", 2);
 	
-	ft_isalnum(); isalnum();
-	// check isalnum
+	if (ft_isalnum(42) == isalnum(42))
+		ft_putendl_fd("ISALNUM SUCCESS", 1);
+	else
+		ft_putendl_fd("ISALNUM FAIL", 1);
 	
-	ft_isascii(); isascii();
-	// check isascii
+	if (ft_isascii('n') == isascii('n'))
+		ft_putendl_fd("ISASCII SUCCESS", 1);
+	else
+		ft_putendl_fd("ISASCII FAIL", 2);
 	
-	ft_isprint(); isprint();
-	// check isprint
+	if (ft_isprint('n') == isprint('n'))
+		ft_putendl_fd("ISPRINT SUCCESS", 1);
+	else
+		ft_putendl_fd("ISPRINT FAIL", 2);
+
+	if (ft_toupper(0) == toupper(0))
+		ft_putendl_fd("TOUPPER SUCCESS", 1);
+	else
+		ft_putendl_fd("TOUPPER FAIL", 2);
 	
-	ft_toupper(); toupper();
-	// check toupper
+	if (ft_tolower(0) == tolower(0))
+		ft_putendl_fd("TOLOWER SUCCESS", 1);
+	else
+		ft_putendl_fd("TOLOWER FAIL", 2);
 	
-	ft_tolower(); tolower();
-	// check tolower
-*/	
 	if (ft_strchr(test, 's') == strchr(test, 's'))
 		ft_putendl_fd("STRCHR SUCCESS", 1);
 	else
