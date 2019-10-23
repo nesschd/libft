@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/10 16:00:08 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/22 18:02:06 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 13:14:44 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,5 +67,5 @@ void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
-
+char				*ft_strdup(const char *s);
 #endif
