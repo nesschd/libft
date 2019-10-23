@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/23 13:10:56 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 13:19:48 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int		main(void)
 	char	*test1 = "C'est parti pour une super correction de l'espace !";
 	char	clibft[420];
 	char	clibc[420];
+	char	*strc;
+	char	*strft;
 /*
 	ft_memset();
 	memset();
@@ -179,9 +181,9 @@ int		main(void)
 */	
 
  	ft_putendl_fd("Tests de strdup :", 1);
- 	if (ft_strdup(test) == strdup(test1))
+ 	if ((strft = ft_strdup(test)) == (strc = strdup(test)))
 	{	
-		if(!strcmp(test, test1))
+		if(!strcmp(strft, strc))
 			ft_putendl_fd("STRDUP SUCCESS", 1);
 		else
 			ft_putendl_fd("STRDUP FAIL", 2);
