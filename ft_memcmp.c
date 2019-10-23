@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 03:17:27 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/22 20:15:56 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 11:46:59 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n)
 		return (1);
 	else if (cast1[i] < cast2[i])
 		return (-1);
-	else if (cast1[i] == cast2[i]) 
+	else
 		return (0);
 }

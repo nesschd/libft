@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/22 20:14:56 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 11:54:52 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,14 @@ int		main(void)
 		ft_putendl_fd("MEMCMP SUCCESS", 1);
 	else
 		ft_putendl_fd("MEMCMP FAIL", 2);
-	if(ft_memcmp("c", "Correction excellente", 0) == memcmp(" ", "Correction excellente", 0))
+	if (ft_memcmp(" ", "Correction excellente", 0) == memcmp(" ", "Correction excellente", 0))
 		ft_putendl_fd("MEMCMP SUCCESS", 1);
 	else
 		ft_putendl_fd("MEMCMP FAIL", 2);
+		ft_putnbr_fd(ft_memcmp(" ", "Correction excellente", 0), 1);
+		ft_putchar_fd('\0', 1);
+		ft_putnbr_fd(memcmp(" ", "Correction excellente", 0), 1);
+		ft_putchar_fd('\0', 1);
 
 	ft_putendl_fd("Tests de strlen :", 1);
 	if (ft_strlen("Super correction") == strlen("Super correction"))
