@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 13:51:26 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/23 14:51:54 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 21:30:43 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	else
 	{
 		ft_strlcpy(str, s1, len);
-		ft_strlcat(str, s2, len);
+		ft_strlcat(str, s2, len + 1);
 		str[len] = '\0';
 		return (str);
 	}

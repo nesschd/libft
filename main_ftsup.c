@@ -6,15 +6,11 @@
 /*   By: tlamart <tlamart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/23 20:38:58 by tlamart           #+#    #+#             */
-/*   Updated: 2019/10/23 21:02:38 by tlamart          ###   ########.fr       */
+/*   Updated: 2019/10/23 22:33:53 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
-char	*ft_itoa(int n);
+#include "libft.h"
 
 int		main(void)
 {
@@ -37,7 +33,7 @@ int		main(void)
 
 	trim = ft_strtrim("    \t   \n  \n trop long . . .  \n \r \r     ", " \n\t\r");
 	ft_putendl_fd("ft_strtrim(\"    \t   \n  \n trop long . . .  \n \r \r     \", \" \n\t\r\")", 1);
-	ft_putendl_fd(trim);
+	ft_putendl_fd(trim, 1);
 	free(trim);
 
 	split = ft_split("- -bonjour-le-monde---hello-world---ghutentag-heinawer-lest", '-');
@@ -58,4 +54,5 @@ int		main(void)
 	ft_putendl_fd("ft_itoa(-2147483648)", 1);
 	ft_putendl_fd(ascii, 1);
 	free(ascii);
+	free(NULL);
 }

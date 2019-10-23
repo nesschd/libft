@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/10 14:30:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/23 20:54:25 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 21:11:19 by tlamart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,10 +80,8 @@ char			*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	start;
 	size_t	end;
-	int		i;
 	char	*str;
 
-	i = 0;
 	start = ft_start(s1, set);
 	end = ft_end(s1, set);
 	if (start < end)
