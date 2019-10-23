@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/23 13:19:48 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 13:44:58 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,9 @@ int		main(void)
 	ft_putendl_fd("Tests de strlen :", 1);
 	if (ft_strlen("Super correction") == strlen("Super correction"))
 		ft_putendl_fd("STRLEN SUCCESS", 1);
-	 if (ft_strlen("   .") == strlen("   ."))
+	else
+		ft_putendl_fd("STRLEN FAIL", 2);
+	if (ft_strlen("   .") == strlen("   ."))
 		ft_putendl_fd("STRLEN SUCCESS", 1);
 	else
 		ft_putendl_fd("STRLEN FAIL", 2);
@@ -90,10 +92,12 @@ int		main(void)
 	ft_putendl_fd("Tests de isalnum :", 1);
 	if (ft_isalnum(42) == isalnum(42))
 		ft_putendl_fd("ISALNUM SUCCESS", 1);
+	else
+		ft_putendl_fd("ISALNUM FAIL", 1);
 	if (ft_isalnum('N') == isalnum('N'))
 		ft_putendl_fd("ISALNUM SUCCESS", 1);
 	else
-		ft_putendl_fd("ISALNUM FAIL", 1);
+		ft_putendl_fd("ISALNUM FAIL", 2);
 	
 	ft_putendl_fd("Tests de isascii :", 1);
 	if (ft_isascii('n') == isascii('n'))
@@ -179,6 +183,7 @@ int		main(void)
 	// check calloc
 
 */	
+/*
 
  	ft_putendl_fd("Tests de strdup :", 1);
  	if ((strft = ft_strdup(test)) == (strc = strdup(test)))
@@ -190,6 +195,6 @@ int		main(void)
 	}
 	else
 		ft_putendl_fd("STRDUP FAIL", 2);
-
+*/
 	return (0);
 }

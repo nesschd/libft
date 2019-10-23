@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/11 03:34:18 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/23 13:14:48 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 14:38:25 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,11 @@
 char	*ft_strdup(const char *s)
 {
 	char	*dest;
+	size_t	len;
 
-	if (!(dest = (char*)malloc(ft_strlen(s) + 1)))
+	len = ft_strlen(s);
+	if (!(dest = (char*)malloc(len + 1)))
 		return (NULL);
-	ft_strcpy(dest, s);
+	ft_strlcpy(dest, s, len + 1);
 	return (dest);
 }

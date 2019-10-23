@@ -6,7 +6,7 @@
 /*   By: nchahed <nchahed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/19 12:07:51 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/19 12:24:21 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 13:52:10 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 	size_t			len;
 	unsigned int	i;
-	
+
 	len = ft_strlen(s);
-	if(!(str = (char *)malloc(len + 1)))
+	if (!(str = (char *)malloc(len + 1)))
 		return (NULL);
 	i = 0;
 	while (s[i])
