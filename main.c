@@ -6,7 +6,7 @@
 /*   By: nchahed <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/22 09:14:24 by nchahed           #+#    #+#             */
-/*   Updated: 2019/10/23 11:54:52 by nchahed          ###   ########.fr       */
+/*   Updated: 2019/10/23 13:10:56 by nchahed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 int		main(void)
 {
 	char	*test = "C'est parti pour une super correction de l'espace !";
+	char	*test1 = "C'est parti pour une super correction de l'espace !";
 	char	clibft[420];
 	char	clibc[420];
 /*
@@ -59,10 +60,6 @@ int		main(void)
 		ft_putendl_fd("MEMCMP SUCCESS", 1);
 	else
 		ft_putendl_fd("MEMCMP FAIL", 2);
-		ft_putnbr_fd(ft_memcmp(" ", "Correction excellente", 0), 1);
-		ft_putchar_fd('\0', 1);
-		ft_putnbr_fd(memcmp(" ", "Correction excellente", 0), 1);
-		ft_putchar_fd('\0', 1);
 
 	ft_putendl_fd("Tests de strlen :", 1);
 	if (ft_strlen("Super correction") == strlen("Super correction"))
@@ -161,7 +158,7 @@ int		main(void)
 		ft_putendl_fd ("STRLCAT FAIL", 2);
 	
 	ft_putendl_fd("Tests de strnstr :", 1);
-	if (ft_strnstr(test, "correction", 420) == strnstr(test, "correction", 420))
+	if (ft_strnstr(test, "c", 50) == strnstr(test, "c", 50))
 		ft_putendl_fd("STRNSTR SUCCESS", 1);
 	else
 		ft_putendl_fd("STRNSTR FAIL", 2);
@@ -180,12 +177,17 @@ int		main(void)
 	// check calloc
 
 */	
-/*
+
  	ft_putendl_fd("Tests de strdup :", 1);
- 	if (ft_strdup(test) == strdup(test))
-		ft_putendl_fd("STRDUP SUCCESS", 1);
+ 	if (ft_strdup(test) == strdup(test1))
+	{	
+		if(!strcmp(test, test1))
+			ft_putendl_fd("STRDUP SUCCESS", 1);
+		else
+			ft_putendl_fd("STRDUP FAIL", 2);
+	}
 	else
 		ft_putendl_fd("STRDUP FAIL", 2);
-*/
+
 	return (0);
 }
